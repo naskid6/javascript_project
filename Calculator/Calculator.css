@@ -1,0 +1,29 @@
+body{
+  background-color: black;
+}
+.js-input{
+  width: 426px;
+  border: none;
+  height: 50px;
+  font-size: 15px;
+}
+.btn-container{
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px;
+  column-gap: 10px;
+  row-gap: 10px;
+  margin-top: 10px;
+}
+.btn-one,.btn-clear,.btn-cancel,.btn-equal{
+  background-color: blanchedalmond;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  width: 80px;
+  height: 80px;
+  font-size: 15px;
+
+}
+.js-input, placeholder{
+  font-size: 24px;
+  text-align: right;
+}

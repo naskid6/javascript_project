@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<link rel="stylesheet" href="./todolist/todo.css  ">
+</head>
+<body>
+  <p class="title">Rock Paper Scissors</p>
+  <button  class="move-button rock-button"><img src="rock.png" class="move-icon"></button>
+  <button  class="move-button paper-button"><img src="paper.png" class="move-icon"></button>
+  <button  class="move-button  scissors-button"><img src="scissors.png" class="move-icon"></button>
+  <p class="js-result result"></p>
+  <p class="js-computers">
+  
+  </p>
+
+  <p class="js-score score"></p>
+
+  <button onclick="
+
+      score.Losses=0
+     score.Wins=0
+      score.Tie=0
+    localStorage.removeItem('score')
+    updateScore()
+  " class="reset-score-button">Reset All</button>
+  <button onclick="autoplay()" class="auto-play-button">Auto Play</button>
+
+  <script src="./todolist/todo.js">
+
+    
+  </script>
+</body>
+</html>

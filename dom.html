@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+ <link rel="stylesheet" href="./todolist/dom.css">
+</head>
+<body>
+  <p>YouTube Subscribe Button</p>
+  <button class="js-subscribe Subscrib-button"
+  onclick="Changed()"
+  >Subscrib</button>
+  <br>
+  <p>Rock Paper Scissors</p>
+  <a href="./rock_paper_scissors.html">Click here</a>
+  <br>
+ <p>Amazon Shipping Calculator</p> 
+ <p>Orders under $40=+$10 shipping</p> 
+ <p>Orders over $40=FREE shipping</p>
+ <input type="text" placeholder="Cost of order" class="js-cost cs-input"
+ onkeydown="
+if(event.key==='Enter'){
+  CalculateTotal()
+}
+ "
+ >
+ <button onclick="
+ CalculateTotal()
+ " class="total">Calculate</button> 
+ <p class="display"></p>
+ <br>
+ <br>
+ <a href="">Css version of these project</a>
+ <script src="./todolist/dom.js">
+
+ </script>
+</body>
+</html>

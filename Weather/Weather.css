@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e90ff, #00c6ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: white;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 520px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 30px 25px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.main-container h1 {
+  font-size: 32px;
+  letter-spacing: 1px;
+}
+
+.first-p {
+  margin-top: 6px;
+  opacity: 0.9;
+  font-size: 14px;
+}
+
+/* Search area */
+.main-container > div:nth-child(2) {
+  display: flex;
+  gap: 10px;
+  margin: 22px 0;
+}
+
+.js-input {
+  flex: 1;
+  padding: 13px 15px;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  font-size: 15px;
+  background: white;
+  color: #333;
+}
+
+.js-btn {
+  padding: 13px 24px;
+  border: none;
+  border-radius: 50px;
+  background: #ffcc00;
+  color: #222;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.js-btn:hover {
+  background: #ffdb4d;
+}
+
+/* Current weather */
+.main-container > div:nth-child(3) {
+  background: rgba(255,255,255,0.2);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.js-city {
+  font-size: 30px;
+  text-transform: capitalize;
+}
+
+.js-temp {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 8px 0 4px;
+}
+
+.js-desc {
+  text-transform: capitalize;
+  opacity: 0.9;
+}
+
+/* Forecast - 4 days */
+.main-container > div:nth-child(4) {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.main-container > div:nth-child(4) > div {
+  background: rgba(255,255,255,0.18);
+  border-radius: 14px;
+  padding: 14px 5px;
+}
+
+.main-container > div:nth-child(4) h2,
+.main-container > div:nth-child(4) h3 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.main-container > div:nth-child(4) h4 {
+  margin-top: 8px;
+  font-size: 17px;
+  color: #ffcc00;
+}
+
+@media (max-width: 480px) {
+  .main-container > div:nth-child(4) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
