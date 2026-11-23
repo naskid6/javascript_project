@@ -1,85 +1,56 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Explorer</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Force-cast</title>
+  <link rel="stylesheet" href="Weather.css">
 </head>
 <body>
-
-    <div class="main-container">
-
-        <div class="header">
-            <h1>Weather Explorer</h1>
-            <p class="first-p">Stay Updated With The Weather Conditions</p>
-        </div>
-
-        <div class="search-container">
-            <input
-                type="text"
-                class="js-input"
-                placeholder="Enter city name"
-            >
-            <button class="js-btn">Search</button>
-        </div>
-
-        <div class="weather-container">
-            <h2 class="js-city">City Name</h2>
-            <h1 class="js-temp">--°C</h1>
-            <p class="js-desc">Weather description</p>
-
-            <div class="weather-details">
-                <div>
-                    <p>Temperature</p>
-                    <h3 id="temp">--°C</h3>
-                </div>
-
-                <div>
-                    <p>Weather</p>
-                    <h3 id="weather">--</h3>
-                </div>
-
-                <div>
-                    <p>Wind Speed</p>
-                    <h3 id="wind">--</h3>
-                </div>
-            </div>
-        </div>
-
-        <div class="forecast-container">
-            <h2>Weather Forecast</h2>
-
-            <div class="forecast-cards">
-                <div class="forecast-card">
-                    <p class="day">Monday</p>
-                    <h3>--°C</h3>
-                    <p>--</p>
-                </div>
-
-                <div class="forecast-card">
-                    <p class="day">Tuesday</p>
-                    <h3>--°C</h3>
-                    <p>--</p>
-                </div>
-
-                <div class="forecast-card">
-                    <p class="day">Wednesday</p>
-                    <h3>--°C</h3>
-                    <p>--</p>
-                </div>
-
-                <div class="forecast-card">
-                    <p class="day">Thursday</p>
-                    <h3>--°C</h3>
-                    <p>--</p>
-                </div>
-            </div>
-        </div>
-
+  <div class="main-container">
+    <div>
+      <h1>Weather Explorer</h1>
+      <p class="first-p">Stay Updated With The weather Conditions</p>
     </div>
-
-    <script src="script.js"></script>
+    <div>
+      <div>
+        <input type="text" class="js-input">
+      </div>
+      <div>
+        <button class="js-btn">Search</button>
+      </div>
+    </div>
+    <div>
+      <div></div>
+      <div>
+        <h2 class="js-city">Calabar</h2>
+        <p class="js-temp">Temperature:32.09c</p>
+        <p class="js-desc">clear sky</p>
+      </div>
+    </div>
+    <div>
+      <div>
+        <h2 class="js-city">Saturday</h2>
+        
+        <h4>34c</h4>
+      </div>
+      <div>
+         <h3>Sunday</h3>
+      
+        <h4>31c</h4>
+      </div>
+      <div>
+         <h2>Monday</h2>
+      
+        <h4>31c</h4>
+      </div>
+      <div>
+         <h3>Tuesday</h3>
+        
+        <h4>31c</h4>
+      </div>
+    </div>
+  </div>
+  <script src="Weather.js"></script>
 </body>
 </html>

@@ -1,254 +1,223 @@
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
 }
 
 body {
-    min-height: 100vh;
-    background: linear-gradient(135deg, #141e30, #243b55);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 25px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e90ff, #00c6ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: white;
 }
 
 .main-container {
-    width: 100%;
-    max-width: 750px;
-    background: rgba(255, 255, 255, 0.12);
-    padding: 35px;
-    border-radius: 20px;
-    color: white;
-    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 520px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 30px 25px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
 }
 
-.header {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.header h1 {
-    font-size: 32px;
-    margin-bottom: 10px;
+.main-container h1 {
+  font-size: 32px;
+  letter-spacing: 1px;
 }
 
 .first-p {
-    font-size: 15px;
-    color: #ddd;
+  margin-top: 6px;
+  opacity: 0.9;
+  font-size: 14px;
 }
 
 /* Search area */
-
-.search-container {
-    display: flex;
-    width: 100%;
-    gap: 12px;
-    margin-bottom: 30px;
+.main-container > div:nth-child(2) {
+  display: flex;
+  gap: 10px;
+  margin: 22px 0;
 }
 
 .js-input {
-    flex: 1;
-    min-width: 0;
-    width: 100%;
-    padding: 15px 20px;
-    border: none;
-    outline: none;
-    border-radius: 50px;
-    font-size: 17px;
-    background: white;
-    color: #333;
-}
-
-.js-input::placeholder {
-    color: #888;
+  flex: 1;
+  padding: 13px 15px;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  font-size: 15px;
+  background: white;
+  color: #333;
 }
 
 .js-btn {
-    padding: 15px 28px;
-    border: none;
-    border-radius: 50px;
-    background: #ffcc00;
-    color: #222;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
+  padding: 13px 24px;
+  border: none;
+  border-radius: 50px;
+  background: #ffcc00;
+  color: #222;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
 }
 
 .js-btn:hover {
-    background: #f0bd00;
+  background: #ffdb4d;
 }
 
 /* Current weather */
-
-.weather-container {
-    text-align: center;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 25px 15px;
-    border-radius: 15px;
-    margin-bottom: 30px;
+.main-container > div:nth-child(3) {
+  background: rgba(255,255,255,0.2);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
 .js-city {
-    font-size: 25px;
-    margin-bottom: 10px;
+  font-size: 30px;
+  text-transform: capitalize;
 }
 
 .js-temp {
-    font-size: 55px;
-    margin: 10px 0;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 8px 0 4px;
 }
 
 .js-desc {
-    font-size: 17px;
-    text-transform: capitalize;
-    color: #ddd;
+  text-transform: capitalize;
+  opacity: 0.9;
 }
 
-.weather-details {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    margin-top: 25px;
+/* Forecast - 4 days */
+.main-container > div:nth-child(4) {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
 }
 
-.weather-details div {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 15px 8px;
-    border-radius: 12px;
+.main-container > div:nth-child(4) > div {
+  background: rgba(255,255,255,0.18);
+  border-radius: 14px;
+  padding: 14px 5px;
 }
 
-.weather-details p {
+.main-container > div:nth-child(4) h2,
+.main-container > div:nth-child(4) h3 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.main-container > div:nth-child(4) h4 {
+  margin-top: 8px;
+  font-size: 17px;
+  color: #ffcc00;
+}
+
+
+/* Mobile responsiveness */
+@media screen and (max-width: 600px) {
+
+  body {
+    min-height: 100dvh;
+    padding: 12px;
+    align-items: flex-start;
+  }
+
+  .main-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px 12px;
+    margin: 10px auto;
+    border-radius: 15px;
+  }
+
+  .main-container h1 {
+    font-size: clamp(21px, 6vw, 27px);
+  }
+
+  .first-p {
     font-size: 13px;
-    color: #ddd;
-    margin-bottom: 8px;
+  }
+
+  /* Search area */
+  .main-container > div:nth-child(2) {
+    display: flex;
+    width: 100%;
+    gap: 7px;
+  }
+.js-input {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  padding: 14px 12px;
+  font-size: 16px;
 }
 
-.weather-details h3 {
-    font-size: 17px;
+.js-btn {
+  flex-shrink: 0;
+  padding: 12px 10px;
+  font-size: 13px;
 }
 
-/* Forecast */
+  /* Current weather */
+  .main-container > div:nth-child(3) {
+    padding: 16px 10px;
+  }
 
-.forecast-container h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
+  .js-city {
+    font-size: clamp(22px, 6vw, 28px);
+    overflow-wrap: anywhere;
+  }
 
-.forecast-cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
-}
+  .js-temp {
+    font-size: 19px;
+  }
 
-.forecast-card {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 18px 8px;
-    border-radius: 12px;
-    text-align: center;
-}
+  /* Forecast */
+  .main-container > div:nth-child(4) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
 
-.forecast-card p {
-    font-size: 13px;
-    margin-bottom: 10px;
-    color: #ddd;
-}
+  .main-container > div:nth-child(4) > div {
+    min-width: 0;
+    padding: 12px 5px;
+  }
 
-.forecast-card h3 {
-    font-size: 20px;
-    margin-bottom: 8px;
-}
+  .main-container > div:nth-child(4) h2,
+  .main-container > div:nth-child(4) h3 {
+    font-size: 12px;
+  }
 
-/* Tablet and mobile */
-
-@media (max-width: 600px) {
-    body {
-        min-height: 100vh;
-        align-items: flex-start;
-        padding: 15px 10px;
-    }
-
-    .main-container {
-        width: 100%;
-        padding: 22px 15px;
-    }
-
-    .header h1 {
-        font-size: 25px;
-    }
-
-    .first-p {
-        font-size: 13px;
-    }
-
-    .search-container {
-        width: 100%;
-        gap: 8px;
-    }
-
-    .js-input {
-        flex: 1;
-        min-width: 0;
-        font-size: 16px;
-        padding: 15px 13px;
-    }
-
-    .js-btn {
-        flex-shrink: 0;
-        padding: 14px 17px;
-        font-size: 14px;
-    }
-
-    .js-temp {
-        font-size: 45px;
-    }
-
-    .weather-details {
-        gap: 7px;
-    }
-
-    .weather-details div {
-        padding: 13px 5px;
-    }
-
-    .weather-details p {
-        font-size: 11px;
-    }
-
-    .weather-details h3 {
-        font-size: 14px;
-    }
-
-    .forecast-cards {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-    }
+  .main-container > div:nth-child(4) h4 {
+    font-size: 15px;
+  }
 }
 
 /* Very small phones */
+@media screen and (max-width: 350px) {
 
-@media (max-width: 350px) {
-    .main-container {
-        padding: 18px 10px;
-    }
+  body {
+    padding: 7px;
+  }
 
-    .search-container {
-        gap: 5px;
-    }
+  .main-container {
+    padding: 16px 9px;
+  }
 
-    .js-input {
-        font-size: 16px;
-        padding: 13px 10px;
-    }
+  .js-btn {
+    padding: 11px 9px;
+    font-size: 12px;
+  }
 
-    .js-btn {
-        padding: 12px 11px;
-        font-size: 12px;
-    }
-
-    .header h1 {
-        font-size: 22px;
-    }
+  .js-input {
+    font-size: 12px;
+  }
 }
