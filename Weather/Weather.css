@@ -120,57 +120,65 @@ body {
   color: #ffcc00;
 }
 
-@media (max-width: 480px) {
+
+/* Mobile responsiveness */
+@media screen and (max-width: 600px) {
+
   body {
-    padding: 10px;
-    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 12px;
     align-items: flex-start;
   }
 
   .main-container {
     width: 100%;
     max-width: 100%;
-    padding: 22px 15px;
-    margin-top: 20px;
+    padding: 20px 12px;
+    margin: 10px auto;
     border-radius: 15px;
   }
 
   .main-container h1 {
-    font-size: 25px;
+    font-size: clamp(21px, 6vw, 27px);
   }
 
   .first-p {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   /* Search area */
   .main-container > div:nth-child(2) {
+    display: flex;
+    width: 100%;
     gap: 7px;
   }
 
   .js-input {
+    flex: 1;
     min-width: 0;
-    width: 100%;
+    width: 0;
     padding: 12px 10px;
-    font-size: 13px;
+    font-size: 14px;
   }
 
   .js-btn {
-    padding: 12px 15px;
+    flex-shrink: 0;
+    padding: 12px 14px;
     font-size: 13px;
   }
 
   /* Current weather */
   .main-container > div:nth-child(3) {
-    padding: 15px 10px;
+    padding: 16px 10px;
   }
 
   .js-city {
-    font-size: 24px;
+    font-size: clamp(22px, 6vw, 28px);
+    overflow-wrap: anywhere;
   }
 
   .js-temp {
-    font-size: 18px;
+    font-size: 19px;
   }
 
   /* Forecast */
@@ -180,6 +188,7 @@ body {
   }
 
   .main-container > div:nth-child(4) > div {
+    min-width: 0;
     padding: 12px 5px;
   }
 
@@ -190,5 +199,26 @@ body {
 
   .main-container > div:nth-child(4) h4 {
     font-size: 15px;
+  }
+}
+
+/* Very small phones */
+@media screen and (max-width: 350px) {
+
+  body {
+    padding: 7px;
+  }
+
+  .main-container {
+    padding: 16px 9px;
+  }
+
+  .js-btn {
+    padding: 11px 9px;
+    font-size: 12px;
+  }
+
+  .js-input {
+    font-size: 12px;
   }
 }
