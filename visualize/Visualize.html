@@ -1,31 +1,68 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Visualization</title>
-  <link rel="stylesheet" href="visual.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualization</title>
+
+    <link rel="stylesheet" href="visual.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
-  <div class="container">
-    <h1>Weather Dashboard</h1>
-    <button onclick="getWeather('Port Harcourt')">Port Harcourt</button>
-    <button onclick="getWeather('Lagos')">Lagos</button>
-    <button onclick="getWeather('Abuja')">Abuja</button>
-    <button onclick="getWeather('Kano')">Kano</button>
 
-    <div class="cards">
-      <div class="card"><h3>Temperature</h3><p id="temp">-- °C</p></div>
-      <div class="card"><h3>Weather</h3><p id="weather">--</p></div>
-      <div class="card"><h3>Wind Speed</h3><p id="wind">--</p></div>
+    <div class="container">
+
+        <h1>Weather Dashboard</h1>
+
+        <div class="search-container">
+            <input
+                type="text"
+                class="js-input"
+                placeholder="Enter state or city"
+            >
+
+            <button class="js-btn">Search</button>
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Temperature</h3>
+                <p id="temp">-- °C</p>
+            </div>
+
+            <div class="card">
+                <h3>Weather</h3>
+                <p id="weather">--</p>
+            </div>
+
+            <div class="card">
+                <h3>Wind Speed</h3>
+                <p id="wind">--</p>
+            </div>
+
+        </div>
+
+        <div class="charts">
+
+            <div class="chart-box">
+                <h3>Temperature in 5 days</h3>
+                <canvas id="barChart"></canvas>
+            </div>
+
+            <div class="chart-box">
+                <h3>Weather Type</h3>
+                <canvas id="pieChart"></canvas>
+            </div>
+
+        </div>
+
     </div>
 
-    <div class="charts">
-      <div class="chart-box"><h3>Temperature in 5 days</h3><canvas id="barChart"></canvas></div>
-      <div class="chart-box"><h3>Weather Type</h3><canvas id="pieChart"></canvas></div>
-    </div>
-  </div>
-  <script src="visualize.js"></script>
+    <script src="visualize.js"></script>
+
 </body>
 </html>
