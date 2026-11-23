@@ -121,7 +121,74 @@ body {
 }
 
 @media (max-width: 480px) {
+  body {
+    padding: 10px;
+    min-height: 100vh;
+    align-items: flex-start;
+  }
+
+  .main-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 22px 15px;
+    margin-top: 20px;
+    border-radius: 15px;
+  }
+
+  .main-container h1 {
+    font-size: 25px;
+  }
+
+  .first-p {
+    font-size: 12px;
+  }
+
+  /* Search area */
+  .main-container > div:nth-child(2) {
+    gap: 7px;
+  }
+
+  .js-input {
+    min-width: 0;
+    width: 100%;
+    padding: 12px 10px;
+    font-size: 13px;
+  }
+
+  .js-btn {
+    padding: 12px 15px;
+    font-size: 13px;
+  }
+
+  /* Current weather */
+  .main-container > div:nth-child(3) {
+    padding: 15px 10px;
+  }
+
+  .js-city {
+    font-size: 24px;
+  }
+
+  .js-temp {
+    font-size: 18px;
+  }
+
+  /* Forecast */
   .main-container > div:nth-child(4) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .main-container > div:nth-child(4) > div {
+    padding: 12px 5px;
+  }
+
+  .main-container > div:nth-child(4) h2,
+  .main-container > div:nth-child(4) h3 {
+    font-size: 12px;
+  }
+
+  .main-container > div:nth-child(4) h4 {
+    font-size: 15px;
   }
 }
